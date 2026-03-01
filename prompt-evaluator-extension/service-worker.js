@@ -1,4 +1,4 @@
-const DEFAULT_EVAL_MODEL = 'mistral-3b-sft-prompt-hack';
+const DEFAULT_EVAL_MODEL = 'ministral-3b-2512';
 const DEFAULT_API_ENDPOINT = 'http://localhost:8080/v1/chat/completions';
 const MISTRAL_API_ENDPOINT = 'https://api.mistral.ai/v1/chat/completions';
 const API_TIMEOUT_MS = 60000;

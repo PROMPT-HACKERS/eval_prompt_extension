@@ -2,7 +2,7 @@ const DEFAULTS = {
   mode: 'local',
   apiKey: '',
   language: 'en',
-  evalModel: 'mistral-3b-sft-prompt-hack',
+  evalModel: 'ministral-3b-2512',
   apiEndpoint: 'http://localhost:8080/v1/chat/completions'
 };
 
