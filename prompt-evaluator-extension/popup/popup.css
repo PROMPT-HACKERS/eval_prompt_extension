@@ -69,6 +69,40 @@ select option {
   color: rgba(255, 255, 255, 0.85);
 }
 
+/* Mode toggle */
+.mode-toggle {
+  display: flex;
+  gap: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mode-btn {
+  flex: 1;
+  padding: 8px 0;
+  background: rgba(255, 255, 255, 0.04);
+  border: none;
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.mode-btn:not(:last-child) {
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mode-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.mode-btn.active {
+  background: rgba(137, 180, 250, 0.15);
+  color: rgba(137, 180, 250, 0.9);
+}
+
 .toggle-btn {
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -108,4 +142,8 @@ select option {
 }
 .saved-msg.hidden {
   opacity: 0;
+}
+
+.hidden {
+  display: none;
 }

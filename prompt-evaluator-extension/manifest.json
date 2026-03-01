@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "Real-time prompt quality evaluation with radar chart",
   "permissions": ["storage"],
-  "host_permissions": ["https://api.mistral.ai/*"],
+  "host_permissions": ["https://api.mistral.ai/*", "http://localhost:*/*", "http://127.0.0.1:*/*"],
   "background": {
     "service_worker": "service-worker.js"
   },
