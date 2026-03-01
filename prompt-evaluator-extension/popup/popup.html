@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup">
+    <h1 class="popup-title" data-i18n="title">Prompt Evaluator</h1>
+
+    <div class="field">
+      <label for="apiKey" data-i18n="settings.apiKey">Mistral API Key</label>
+      <div class="input-wrap">
+        <input type="password" id="apiKey" placeholder="sk-..." autocomplete="off">
+        <button id="toggleKey" class="toggle-btn" title="Show/Hide">👁</button>
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="language" data-i18n="settings.language">Language</label>
+      <select id="language">
+        <option value="en">English</option>
+        <option value="ja">日本語</option>
+        <option value="fr">Français</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="evalModel" data-i18n="settings.evalModel">Evaluation Model</label>
+      <input type="text" id="evalModel" placeholder="ministral-3b-2512">
+    </div>
+
+    <button id="saveBtn" class="save-btn" data-i18n="settings.save">Save</button>
+    <div id="savedMsg" class="saved-msg hidden" data-i18n="settings.saved">Settings saved</div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
