@@ -30,7 +30,8 @@ async function callLLM(apiEndpoint, apiKey, model, systemPrompt, userContent) {
         messages: [
           { role: 'system', content: systemPrompt },
           { role: 'user', content: userContent }
-        ]
+        ],
+        response_format: { type: 'json_object' }
       }),
       signal: controller.signal
     });

@@ -6,15 +6,16 @@
       return hostname === 'chat.mistral.ai';
     },
     findInputElement() {
-      return document.querySelector('textarea')
-        || document.querySelector('div[contenteditable="true"]');
+      // chat.mistral.ai uses ProseMirror inside a Radix ScrollArea
+      return document.querySelector('[data-radix-scroll-area-viewport] .ProseMirror[contenteditable="true"]')
+        || document.querySelector('.caret-brand-500 .ProseMirror[contenteditable="true"]')
+        || document.querySelector('.ProseMirror[contenteditable="true"]');
     },
     getTextContent(el) {
-      if (el.tagName === 'TEXTAREA') return el.value;
       return el.innerText || el.textContent || '';
     },
     getAnchorElement(el) {
-      return el.closest('form') || el.parentElement;
+      return el.closest('[data-radix-scroll-area-viewport]') || el.closest('form') || el.parentElement;
     }
   });
 })();
